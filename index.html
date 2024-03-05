@@ -213,6 +213,14 @@
 </head>
 
 <body>
+
+  <audio id="myAudio" src="./assets/audio/bpddudu.mp3"></audio>
+<script>
+  document.addEventListener('mousemove', function() {
+    document.getElementById('myAudio').play();
+  });
+</script>
+
   <section class="blackpinkbgpng">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
@@ -306,10 +314,10 @@
           and empowerment through our music, and we invite you to be part of our ever-growing community. Explore,
           engage, and experience the magic of Blackpink like never before!</p>
       </div>
-      <div class="overflow-hidden" style="max-height: 45vh;">
+      <div class="overflow-hidden" >
         <div class="container px-5">
           <img src="./assets/images/blackpinkinyouarea.jpg" class="img-fluid border rounded-3 shadow-lg mb-4"
-            alt="Example image" width="700" height="500" loading="lazy">
+            alt="Example image" width="700" loading="lazy">
         </div>
       </div>
     </div>
@@ -392,7 +400,7 @@
     <div class="container py-5 my-5 text-white">
       <div class="row">
         <div class="col-lg-6">
-          <h2 class="mb-4 display-4">Enter the Blackpink Universe</h2>
+          <h2 class="mb-4 display-4 fw-bold">Enter the Blackpink Universe</h2>
           <p class="lead">Step into the alluring realm of Blackpink with our exclusive showcase, where you can indulge in their dynamic performances, iconic fashion, and irresistible charisma. Immerse yourself in their captivating world, experiencing firsthand the essence of Blackpink's charm and allure.</p>
         </div>
         <div class="col-lg-6">
@@ -434,7 +442,7 @@
     </div>
   </section>
 
-  <section class="footerpart py-5 bg-dark text-white">
+  <section class="footerpart py-3 bg-dark text-white">
     <div class="container">
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 my-4">
             <div class="col mb-3">
@@ -502,10 +510,6 @@
     </footer>
 </section>
 
-<audio autoplay loop>
-  <source src="assets/audio/bpddudu.mp3" type="audio/mp3">
-  Your browser does not support the audio element.
-</audio>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
