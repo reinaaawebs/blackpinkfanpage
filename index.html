@@ -215,15 +215,21 @@
 <body>
 
   <audio id="myAudio" src="./assets/audio/bpddudu.mp3"></audio>
-  <script>
-    function playAudio() {
-      document.getElementById('myAudio').play();
-    }
+<script>
+  function playAudio() {
+    document.getElementById('myAudio').play();
+  }
+
+  document.addEventListener('touchstart', playAudio);
+  document.addEventListener('mousemove', playAudio);
   
-    document.addEventListener('touchmove', playAudio);
-    document.addEventListener('mousemove', playAudio);
-  </script>
+  document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) {
+      playAudio();
+    }
+  });
 </script>
+
 
   <section class="blackpinkbgpng">
     <nav class="navbar navbar-expand-lg navbar-dark">
