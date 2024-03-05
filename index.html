@@ -215,10 +215,14 @@
 <body>
 
   <audio id="myAudio" src="./assets/audio/bpddudu.mp3"></audio>
-<script>
-  document.addEventListener('mousemove', function() {
-    document.getElementById('myAudio').play();
-  });
+  <script>
+    function playAudio() {
+      document.getElementById('myAudio').play();
+    }
+  
+    document.addEventListener('touchmove', playAudio);
+    document.addEventListener('mousemove', playAudio);
+  </script>
 </script>
 
   <section class="blackpinkbgpng">
