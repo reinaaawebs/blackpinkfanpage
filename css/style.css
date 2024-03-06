@@ -1,0 +1,195 @@
+    .feature-icon {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 0.75rem;
+    }
+
+    body {
+        background-color: pink;
+        font-family: "Space Grotesk", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+
+    }
+
+    .blackpinkbgpng {
+        position: relative;
+        background-color: rgba(2, 2, 2, 0.5);
+    }
+
+    .blackpinkbgpng::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../assets/images/bppng.png");
+        opacity: 0.9;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+    }
+    .bg2bp {
+        position: relative;
+        background-color: rgba(2, 2, 2, 0.6);
+    }
+
+    .bg2bp::before {
+    content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../assets/images/bpbg4.jpg");
+        opacity: 0.9;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .blackpinkbgpng-content {
+        position: relative;
+        z-index: 1;
+        color: white;
+    }
+
+    .blackpinkbgpng-content h1 {
+        color: white !important;
+    }
+
+    .icon-link {
+        text-decoration: none;
+    }
+
+    .icon-link:hover {
+        text-decoration: underline;
+        color: black;
+    }
+
+    .blackpink {
+        font-weight: bold;
+    }
+
+    .dropdown-item:hover {
+        background-color: #343a40 !important;
+    }
+
+    @media (max-width: 768px) {
+        .member {
+        text-align: center;
+        }
+
+        .flex-directions {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        gap: 20px;
+        }
+    }
+
+    .nav-item > .nav-link.active {
+        border-bottom: 4px solid pink;
+        text-decoration: none;
+        text-decoration-skip-ink: none;
+    }
+
+    .nav-link:hover {
+        border-bottom: 4px solid pink;
+        opacity: 0.5;
+    }
+
+    @media only screen and (max-width: 1280px) {
+    .blackpinkbgpng::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../assets/images/bppng.png");
+        opacity: 0.9;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        animation: slideBackground 20s linear infinite alternate; 
+    }
+
+    .bg2bp::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../assets/images/bpbg3.jpg");
+        opacity: 0.9;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        animation: slideBackground 15s linear infinite alternate; 
+    }
+
+    @keyframes slideBackground {
+        0% {
+        background-position: right;
+        }
+        100% {
+        background-position: left;
+        }
+    }
+
+    .flex-directions {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        align-items: center; 
+        gap: 20px;
+        
+        }
+
+    }
+
+    .text-pink {
+        color: pink;
+    }
+
+    .blackpink-button {
+        background-image: linear-gradient(to right, #FFC0CB, white);
+        color: white;
+        border: none;
+        border-radius: 30px; 
+        padding: 10px 20px; 
+    }
+
+    .blackpink-button:hover,
+    .blackpink-button:focus {
+        background-image: linear-gradient(to right, #FFC0CB, white) !important;
+        color: white !important;
+    }
+
+    .footerpart {
+    background-color: pink; 
+        padding: 40px 0;
+        color: white;
+    }
+    .footerpart a {
+        color: white;
+    }
+    .footerpart a:hover {
+        color: pink;
+    }
+    .footerpart p {
+        color: white !important; 
+    }
+
+    audio {
+        display: none; 
+    }
