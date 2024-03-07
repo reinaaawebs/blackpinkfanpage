@@ -155,6 +155,15 @@
         
         }
 
+    .flex-directions2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        align-items: center; 
+        gap: 30px;
+            
+        }
+
     }
 
     .text-pink {
@@ -193,3 +202,20 @@
     audio {
         display: none; 
     }
+
+
+    @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(50px); /* Start position: 50px below */
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0); /* End position: original position */
+        }
+      }
+      
+      /* Apply the fade-in animation to elements with the 'fade-in' class */
+      .fade-in {
+        animation: fadeIn 0.5s ease-in-out forwards; /* Animation duration: 0.5s */
+      }
