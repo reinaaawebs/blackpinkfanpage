@@ -45,6 +45,9 @@
       }
     }
   
+    // Shuffle the audio elements
+    shuffleArray(audioElements);
+  
     // Function to play the next audio
     function playNextAudio() {
       audioElements[currentAudioIndex].pause();
@@ -107,8 +110,8 @@
       // Event listener for scroll
       window.addEventListener('scroll', fadeInElements);
     });
-    
-  </script>
+</script>
+
 
   <section class="blackpinkbgpng">
     <nav class="navbar navbar-expand-lg navbar-dark">
