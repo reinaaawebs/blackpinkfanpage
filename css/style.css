@@ -80,6 +80,9 @@
         background-color: #343a40 !important;
     }
 
+
+  
+
     @media (max-width: 768px) {
         .member {
         text-align: center;
@@ -91,7 +94,28 @@
         align-self: center;
         gap: 20px;
         }
+
+        
+        .navbpdropdowntextcenter {
+            text-align: center;
+        }
+
+  
+    
     }
+
+
+    @media (max-width: 991px) {
+      
+        
+        .navbpdropdowntextcenter {
+            text-align: center;
+        }
+
+  
+    
+    }
+
 
     .nav-item > .nav-link.active {
         border-bottom: 4px solid pink;
@@ -164,6 +188,10 @@
             
         }
 
+    
+
+       
+
     }
 
     .text-pink {
@@ -203,6 +231,24 @@
         display: none; 
     }
 
+    .dropdown-menu {
+        background-color: transparent;
+        border: none; /* Remove border */
+      }
+    
+    .dropdown-menu .dropdown-item {
+        color: white;
+      }
+    
+    .dropdown-menu .dropdown-item:hover {
+        background-color: transparent !important;
+        border-bottom: 4px solid pink;
+        opacity: 0.5;
+      }
+
+
+
+    
 
     @keyframes fadeIn {
         from {
@@ -217,5 +263,8 @@
       
       /* Apply the fade-in animation to elements with the 'fade-in' class */
       .fade-in {
-        animation: fadeIn 0.5s ease-in-out forwards; /* Animation duration: 0.5s */
+        animation: fadeIn 1s ease-in-out forwards; /* Animation duration: 0.5s */
       }
+
+    
+    
