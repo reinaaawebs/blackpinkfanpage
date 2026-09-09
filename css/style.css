@@ -266,5 +266,21 @@
         animation: fadeIn 1s ease-in-out forwards; /* Animation duration: 0.5s */
       }
 
+      #google_translate_element {
+        display: none;
+    }
     
     
+    .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+    }
+
+    .goog-tooltip.skiptranslate,
+    .goog-text-highlight.skiptranslate {
+        display: none !important;
+    }
+
+    .notranslate {
+        display: none;
+    }
+
