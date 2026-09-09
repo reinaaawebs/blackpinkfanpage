@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icon-css/css/flag-icon.min.css">
   <style>
   
   </style>
@@ -24,92 +26,10 @@
   <audio id="myAudio4" src="./assets/audio/bpasifitsyourlast.mp3"></audio>
   <audio id="myAudio5" src="./assets/audio/bptally.mp3"></audio>
 
+  
+
   <script>
-    // Audio elements
-    const audioElements = [
-      document.getElementById('myAudio1'),
-      document.getElementById('myAudio2'),
-      document.getElementById('myAudio3'),
-      document.getElementById('myAudio4'),
-      document.getElementById('myAudio5')
-    ];
-  
-    // Current audio index
-    let currentAudioIndex = 0;
-  
-    // Function to shuffle the array
-    function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-    }
-  
-    // Shuffle the audio elements
-    shuffleArray(audioElements);
-  
-    // Function to play the next audio
-    function playNextAudio() {
-      audioElements[currentAudioIndex].pause();
-      currentAudioIndex = (currentAudioIndex + 1) % audioElements.length;
-      audioElements[currentAudioIndex].play();
-    }
-  
-    // Function to play audio
-    function playAudio() {
-      audioElements[currentAudioIndex].play();
-    }
-  
-    // Event listeners for touch and mousemove
-    document.addEventListener('touchstart', playAudio);
-    document.addEventListener('mousemove', playAudio);
-  
-    // Event listener for visibility change
-    document.addEventListener('visibilitychange', function() {
-      if (!document.hidden) {
-        playAudio();
-      }
-    });
-  
-    // Event listeners for ended audio
-    audioElements.forEach(function(audioElement) {
-      audioElement.addEventListener('ended', playNextAudio);
-    });
-
-    // Function to check if element is in viewport
-    function isInViewport(element) {
-      const rect = element.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-    } 
-
-    // Event listener for DOMContentLoaded
-    document.addEventListener('DOMContentLoaded', function () {
-      // Query all sections
-      const sections = document.querySelectorAll('.blackpink-member');
-
-      // Function to fade in elements
-      function fadeInElements() {
-        sections.forEach(function (section) {
-          const bounding = section.getBoundingClientRect();
-          if (bounding.top < window.innerHeight && bounding.bottom >= 0) {
-            section.classList.add('fade-in');
-          } else {
-            section.classList.remove('fade-in');
-          }
-        });
-      }
-
-      // Check on initial load
-      fadeInElements(); 
-
-      // Event listener for scroll
-      window.addEventListener('scroll', fadeInElements);
-    });
+    
 </script>
 
 
@@ -136,10 +56,10 @@
                 Members
               </a>
               <ul class="dropdown-menu ">
-                <li><a class="dropdown-item fw-bold navbpdropdowntextcenter" href="#">Jisoo</a></li>
-                <li><a class="dropdown-item fw-bold navbpdropdowntextcenter" href="#">Jennie</a></li>
-                <li><a class="dropdown-item fw-bold navbpdropdowntextcenter" href="#">Rosé</a></li>
-                <li><a class="dropdown-item fw-bold navbpdropdowntextcenter" href="#">Lisa</a></li>
+                <li><a class="dropdown-item nav-link fw-bold navbpdropdowntextcenter" href="#">Jisoo</a></li>
+                <li><a class="dropdown-item nav-link fw-bold navbpdropdowntextcenter" href="#">Jennie</a></li>
+                <li><a class="dropdown-item nav-link fw-bold navbpdropdowntextcenter" href="#">Rosé</a></li>
+                <li><a class="dropdown-item nav-link fw-bold navbpdropdowntextcenter" href="#">Lisa</a></li>
               </ul>
             <li class="nav-item">
               <a class="nav-link fw-bold" href="#">Music</a>
@@ -201,9 +121,10 @@
           </ul>
         </div>
       </div>
+      
     </nav>
-    <div class="blackpinkbgpng-content px-4 pt-4  text-center">
-      <h1 class="display-4 fw-bold text-body-emphasis pb-5 mb-5">BLΛƆKPIИK In Your Area</h1>
+    <div class="blackpinkbgpng-content px-4 pt-5  text-center">
+      <h1 class="display-4 fw-bold text-body-emphasis pb-5 mb-5"><span translate="no">BLΛƆKPIИK In Your Area</span></h1>
       <div class="col-lg-6 mx-auto">
         <p class="lead mb-3 ">Welcome to Blackpink's official website, where we are dedicated to bringing you closer
           to the sensational world of Blackpink. As global icons in the music industry, Blackpink captivates audiences
@@ -232,7 +153,7 @@
           <img src="./assets/images/memberlisa2.png" class="d-block mx-lg-auto img-fluid" alt="Lisa" height="200" loading="lazy">
         </div>
         <div class="col-lg-6">
-          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 ">Lisa (Lalisa Manoban)</h1>
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 "><span translate="no">Lisa </span> (Lalisa Manoban)</h1>
           <p class="lead text-pink">Lisa, born as Lalisa Manoban, is the main dancer and rapper of Blackpink. Hailing from Thailand, she brings
             a unique blend of charisma, talent, and international appeal to the group. Lisa's dynamic dance moves, rap
             skills, and magnetic personality have made her a global sensation, earning her millions of fans around the
@@ -252,7 +173,7 @@
           <img src="./assets/images/memberrose.png" class="d-block mx-lg-auto img-fluid" alt="Rosé" height="200" loading="lazy">
         </div>
         <div class="col-lg-6">
-          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 ">Rosé (Park Chaeyoung)</h1>
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 "><span translate="no">Rosé </span> (Park Chaeyoung)</h1>
           <p class="lead text-pink">Rosé, whose birth name is Park Chae-young, is the main vocalist of Blackpink. She is known for her soulful
             voice, emotional depth, and remarkable talent as a musician. Rosé's passion for music shines through in her
             performances, captivating audiences with her powerful vocals and heartfelt expressions.</p>
@@ -271,7 +192,7 @@
           <img src="./assets/images/memberjennie.png" class="d-block mx-lg-auto img-fluid" alt="Jennie" height="200" loading="lazy">
         </div>
         <div class="col-lg-6">
-          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 ">Jennie (Jennie Kim)</h1>
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 "><span translate="no">Jennie </span> (Jennie Kim)</h1>
           <p class="lead text-pink">Jennie, born as Jennie Kim, is a rapper and vocalist in Blackpink. With her unique sense of style and
             charismatic stage presence, she has become a fashion icon and trendsetter in the K-pop industry. Jennie's
             confident and assertive demeanor adds an electrifying energy to Blackpink performances.</p>
@@ -290,7 +211,7 @@
           <img src="./assets/images/memberjisoo.png" class="d-block mx-lg-auto img-fluid" alt="Jisoo" height="200" loading="lazy">
         </div>
         <div class="col-lg-6">
-          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 ">Jisoo (Kim Ji-soo)</h1>
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 "><span translate="no">Jisoo </span> (Kim Jisoo)</h1>
           <p class="lead text-pink">Jisoo, whose full name is Kim Ji-soo, is a member of Blackpink known for her powerful vocals and
             captivating stage presence. She exudes elegance and grace both on and off stage, earning her the title of
             "Miss Korea" among fans. Jisoo's warm and caring personality makes her beloved by her bandmates and fans
@@ -311,7 +232,7 @@
     <div class="container py-5 my-5 text-white">
       <div class="row">
         <div class="col-lg-6">
-          <h2 class="mb-4 display-4 fw-bold">Enter the Blackpink Universe</h2>
+          <h2 class="mb-4 display-4 fw-bold">Enter the <span translate="no"> BLΛƆKPIИK </span> Universe</h2>
           <p class="lead">Step into the alluring realm of Blackpink with our exclusive showcase, where you can indulge in their dynamic performances, iconic fashion, and irresistible charisma. Immerse yourself in their captivating world, experiencing firsthand the essence of Blackpink's charm and allure.</p>
         </div>
         <div class="col-lg-6">
@@ -392,24 +313,25 @@
                 </ul>
             </div>
             <div class="col-md-12">
-              <p class="text-muted text-center">DISCLAIMER: This website is a fan-made tribute to Blackpink, created by a dedicated admirer. 
-                All content, including images, videos, and media, is used solely for tribute and entertainment purposes. We respect the rights 
-                of the original creators and acknowledge that all materials used belong to their respective owners. We do not claim ownership of 
-                any material unless explicitly stated. If you are the rightful owner of any content featured on this website and wish for it to be removed, 
-                please contact us, and we will promptly take appropriate action.</p>
+              <p class="text-muted text-center">This website is an unofficial concept project built 
+                strictly for educational and portfolio purposes to demonstrate front-end 
+                development capabilities. All media, logos, and trademarks belong to YG and their 
+                respective owners  and no copyright infringement is intended.</p>
           </div>
         </footer>
     </div>
     <footer class="text-center">
+      
         <ul class="nav justify-content-center border-bottom mb-3">
             <li class="nav-item"><a href="#" class="nav-link px-2">Home</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2">About</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2">Member</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2">Music</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2">Shop</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2">Born Pink</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2" id="bornPink">Born Pink</a></li>
         </ul>
-        <p>BlackPink Social Netowrking Accounts</p>
+        <p>BlackPink Social Networking Accounts</p>
+        <div class="border-bottom">
         <div class="d-flex justify-content-center gap-3 mb-3">
           <a href="https://www.facebook.com/BLACKPINKOFFICIAL/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="32" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
               <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg></a>
@@ -427,14 +349,42 @@
             <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/>
           </svg></a>
       </div>
+      </div>
+      
       
         
     </footer>
-    <footer class="text-center">
+    <footer class="text-center mt-3">
+      
+      
+      <p>Languages (Supported by Google Translation)</p>
+      <div class="d-flex justify-content-center gap-3  mb-3">
+        <button class="btn btn-link btn-flag" id="en" onclick="translateTo('en')">
+          <span class="flag-icon flag-icon-us fs-4"></span>
+        </button>
+        <button class="btn btn-link btn-flag" id="fr" onclick="translateTo('fr')">
+          <span class="flag-icon flag-icon-fr fs-4"></span>
+        </button>
+        <button class="btn btn-link btn-flag" id="ja" onclick="translateTo('ja')">
+          <span class="flag-icon flag-icon-jp fs-4"></span>
+        </button>
+        <button class="btn btn-link btn-flag" id="ko" onclick="translateTo('ko')">
+          <span class="flag-icon flag-icon-kr fs-4"></span>
+        </button>
+        <button class="btn btn-link btn-flag" id="zh-CN" onclick="translateTo('zh-CN')">
+          <span class="flag-icon flag-icon-cn fs-4"></span>
+        </button>
+      </div>
+     
+      <div id="google_translate_element"></div>
+      
+      
+  </footer>
+    <footer class="text-center border-top">
       <div class="container">
           <div class="row align-items-center">
               <div class="col-md-6 text-md-start">
-                  <p>© 2024 Designed by ReinaaaWebs. All Rights Reserved.</p>
+                  <p>© 2026 Designed by ReinaaaWebs. All Rights Reserved.</p>
               </div>
               <div class="col-md-6 text-md-end d-flex align-items-center justify-content-end gap-2">
                 <p class="me-3 mb-0">Contact Me</p>
@@ -454,15 +404,19 @@
                       <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.2.2 0 0 0-.153.028.2.2 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224q-.03.17-.029.353c0 1.795 2.091 3.256 4.669 3.256s4.668-1.451 4.668-3.256c0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165"/>
                     </svg>
                   </a>
+
+                  
                   
               </div>
           </div>
       </div>
   </footer>
-
+ 
+ 
   
 </section>
-
+<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="./js/javascript.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
